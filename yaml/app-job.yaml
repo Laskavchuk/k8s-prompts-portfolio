@@ -1,0 +1,11 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: go-demo-job
+spec:
+  template:
+    spec:
+      containers:
+        - name: go-demo-app
+          image: denvazh/go-demo-app:latest
+      restartPolicy: Never
